@@ -1,0 +1,446 @@
+<html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KESPL | Kothari Electric Services Pvt. Ltd.</title>
+    
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0b3d91', // KESPL deep blue
+                        secondary: '#1f6feb', // Highlight blue
+                        accent: '#eef4ff' // Very light blue background
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #0b3d91; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1f6feb; }
+        
+        /* Smooth fade-in animation for catalogue */
+        .fade-in {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden">
+
+<!-- Navigation -->
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo Section -->
+            <div class="flex-shrink-0 flex items-center gap-3">
+                <img src="K.jpg" alt="KESPL Logo" class="h-12 w-auto rounded object-contain">
+                <span class="font-bold text-2xl text-primary tracking-tight">KESPL</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-secondary font-medium transition-colors">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-secondary font-medium transition-colors">About Us</a>
+                <a href="#catalogue" class="text-gray-600 hover:text-secondary font-medium transition-colors">Catalogue</a>
+                <a href="#brands" class="text-gray-600 hover:text-secondary font-medium transition-colors"> Catering Brands</a>
+                <a href="#contact" class="text-gray-600 hover:text-secondary font-medium transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="block px-3 py-2 text-gray-800 font-medium hover:bg-gray-50 rounded-md">Home</a>
+            <a href="#about" class="block px-3 py-2 text-gray-800 font-medium hover:bg-gray-50 rounded-md">About Us</a>
+            <a href="#catalogue" class="block px-3 py-2 text-gray-800 font-medium hover:bg-gray-50 rounded-md">Catalogue</a>
+            <a href="#brands" class="block px-3 py-2 text-gray-800 font-medium hover:bg-gray-50 rounded-md">Brands</a>
+            <a href="#contact" class="block px-3 py-2 text-gray-800 font-medium hover:bg-gray-50 rounded-md">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="relative pt-20 h-screen flex items-center justify-center">
+    <div class="absolute inset-0 w-full h-full">
+        <!-- High quality industrial background image -->
+        <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Industrial Facility" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-black/60"></div>
+  +  </div>
+    
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <span class="text-blue-300 font-semibold tracking-wider uppercase text-sm mb-4 block">Kothari Electric Services Pvt. Ltd.</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+            Integrated Solutions for <br class="hidden md:block" />
+            <span class="text-blue-400">Industrial Power</span>
+        </h1>
+        <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
+            Delivering innovative electrical engineering solutions, power distribution systems, switchgear, industrial automation, and premier product sourcing across India.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#catalogue" class="bg-secondary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1">
+                Explore Catalogue
+            </a>
+            <a href="#contact" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:-translate-y-1">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left content: Text -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">About KESPL</h2>
+                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                    <strong class="text-gray-900">KESPL</strong> is an industry leader specializing in industrial power systems, transformers, switchgear, control panels, maintenance contracts, and complete electrical projects. We bring decades of expertise to ensure your infrastructure is safe, efficient, and reliable.
+                </p>
+                
+                <div class="bg-accent p-8 rounded-2xl border border-blue-100 shadow-sm mt-8 relative overflow-hidden">
+                    <!-- Decorative quote mark -->
+                    <div class="absolute -top-4 -left-4 text-9xl text-blue-100/50 font-serif leading-none select-none">"</div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-primary mb-3">The Story Behind <i>Viroco</i></h3>
+                        <p class="text-gray-700 leading-relaxed text-sm">
+                            Viroco may not yet be a widely recognized name, but it carries a legacy that means everything to us. The brand was inspired by our grandfather, whose values, wisdom, and unwavering dedication continue to guide our journey. <br><br>
+                            His vision of hard work, integrity, and excellence remains the foundation of everything we do. While he is no longer with us, his principles live on through <strong>Viroco</strong>, inspiring us to create products that reflect the quality and trust he stood for. <br><br>
+                            For us, Viroco is more than a brand—it is a tribute to a mentor, a role model, and our greatest source of inspiration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right content: Stats & Image -->
+            <div class="space-y-4">
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
+                        <span class="block text-3xl font-bold text-secondary mb-1">35+</span>
+                        <span class="text-sm text-gray-500 font-medium">Years of Experience</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
+                        <span class="block text-3xl font-bold text-secondary mb-1">1500+</span>
+                        <span class="text-sm text-gray-500 font-medium">Customers</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
+                        <span class="block text-3xl font-bold text-secondary mb-1">20k+</span>
+                        <span class="text-sm text-gray-500 font-medium">Products</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Dynamic Product Catalogue Section -->
+<section id="catalogue" class="py-24 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Product Catalogue</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Browse our comprehensive range of industrial electrical, automation, and mechanical products sourced from world-class brands like Polycab, ABB, and more.</p>
+        </div>
+
+        <!-- Search and Filter UI -->
+        <div class="mb-10 space-y-6">
+            <!-- Search Bar -->
+            <div class="relative max-w-2xl mx-auto">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <input type="text" id="searchInput" placeholder="Search for wires, switchgears and more..." class="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary shadow-sm outline-none transition-all text-gray-700 bg-white text-lg">
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2" id="filterButtons">
+                <button onclick="filterCategory('All')" class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition-all bg-secondary text-white shadow-md">All Products</button>
+                <button onclick="filterCategory('Switchgear')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100">Switchgears</button>
+                <button onclick="filterCategory('Wires & Cables')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100">Wires & Cables</button>
+                <button onclick="filterCategory('Motors & Gearboxes')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100">Motors</button>
+                <button onclick="filterCategory('Automation')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100">Automation</button>
+                <button onclick="filterCategory('Lighting')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100">Lighting</button>
+                <button onclick="filterCategory('Solar')" class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100">Solar</button>
+            </div>
+        </div>
+
+        <!-- Dynamic Results Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px] content-start">
+            <!-- Product cards rendered via JS -->
+        </div>
+    </div>
+</section>
+
+<!-- Channel Partners / Brands -->
+<section id="brands" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Channel Partners & Brands</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">We are authorized distributors and stockists for leading international and national electrical brands.</p>
+        </div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center opacity-100">
+<div class="p-6 hover:blue-0 transition duration-300 transform hover:scale-110">
+<h3 class="text-4xl font-bold text-blue">Panasonic</h3>
+ </div>
+<div><img src="logos/abb.jpg" alt="ABB"></div>
+<div><img src="logos/goldmedal.png" alt="Goldmedal"></div>
+<div><img src="logos/schneider.png" alt="Schneider"></div>
+<div><img src="logos/kolors.jpg" alt="KOLORS"></div>
+<div><img src="logos/polycab.jpg" alt="POLYCAB"></div>
+<div><img src="logos/legrand.png" alt="Legrand"></div>
+<div><img src="logos/scame.png" alt="SCAME"></div>
+<div><img src="logos/rrkabel.png" alt="RR Kabel"></div>
+<div><img src="logos/precision.png" alt="PRECISION"></div>
+</section>
+            <!-- Contact Info -->
+            <div class="p-10 lg:p-12 bg-accent/30">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">KESPL Office</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-secondary shrink-0 mt-1">📍</div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Address</p>
+                            <p class="text-gray-600 mt-1 leading-relaxed">Shop no 3, Lily tower, Swami Vivekanand Rd, Shastri Nagar, Jogeshwari West, Mumbai, Maharashtra 400102</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-secondary shrink-0">📞</div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Phone</p>
+                            <p class="text-gray-600 mt-1">+91 98202 12443</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-secondary shrink-0">📧</div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Email</p>
+                            <p class="text-gray-600 mt-1">info.kespl@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 pt-4 border-t border-gray-200">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-secondary shrink-0 mt-1">⏱</div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Operating Hours</p>
+                            <p class="text-gray-600 mt-1">Monday – Saturday: 10:00 AM – 7:00 PM</p>
+                            <p class="text-red-500 text-sm font-medium mt-1"><b>Sunday: Closed</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="h-[400px] lg:h-auto min-h-full w-full bg-gray-200 relative">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Shastri%20Nagar,%20Jogeshwari%20West,%20Mumbai&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                    class="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#041a40] py-12 text-center text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+        <img src="K.jpg" alt="KESPL Logo" class="h-16 w-auto mb-6 rounded-lg opacity-80 hover:opacity-100 transition">
+        <p class="mb-4">Delivering Excellence in Industrial Power & Sourcing.</p>
+        <div class="flex space-x-4 mb-8">
+            <a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+            <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
+            <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+        </div>
+        <p class="text-sm">© 2026 Kothari Electric Services Pvt. Ltd. (KESPL). All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // --- Data: Vashi Integrated Solutions Aligned Product Catalogue ---
+    const catalogueData = [
+        // Switchgears
+        { name: "Siemens Air Circuit Breakers (ACB)", brand: "Siemens", category: "Switchgear", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Siemens+ACB", desc: "Reliable power distribution protection up to 6300A." },
+        { name: "ABB Moulded Case Circuit Breakers (MCCB)", brand: "ABB", category: "Switchgear", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=ABB+MCCB", desc: "High-performance MCCBs for industrial load protection." },
+        { name: "Legrand Changeover Switches", brand: "Legrand", category: "Switchgear", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Changeover+Switch", desc: "Manual and motorized transfer switches." },
+        { name: "Siemens Motor Protection Circuit Breakers", brand: "Siemens", category: "Switchgear", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=MPCB", desc: "Compact motor protection against short circuits." },
+        
+        // Wires & Cables
+        { name: "Polycab Multicore Industrial Cables", brand: "Polycab", category: "Wires & Cables", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Polycab+Cables", desc: "Heavy-duty armored and unarmored multicore cables." },
+        { name: "Finolex FRLS Flexible Wires", brand: "Finolex", category: "Wires & Cables", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Finolex+Wires", desc: "Flame Retardant Low Smoke wires for safety." },
+        { name: "Polycab Submersible Flat Cables", brand: "Polycab", category: "Wires & Cables", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Submersible+Cable", desc: "Water-resistant cables for submersible pump applications." },
+        
+        // Motors & Gearboxes
+        { name: "Bonfiglioli Helical Gear Motors", brand: "Bonfiglioli", category: "Motors & Gearboxes", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Gear+Motor", desc: "High torque density inline helical gearboxes." },
+        { name: "Siemens IE3 Energy Efficient Motors", brand: "Siemens", category: "Motors & Gearboxes", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=IE3+Motor", desc: "Three-phase induction motors with premium efficiency." },
+        { name: "Bonfiglioli Worm Gearboxes", brand: "Bonfiglioli", category: "Motors & Gearboxes", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Worm+Gearbox", desc: "Compact and versatile right-angle gear units." },
+
+        // Automation
+        { name: "Omron Photoelectric Sensors", brand: "Omron", category: "Automation", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Omron+Sensor", desc: "Precision industrial sensing for automated lines." },
+        { name: "Connectwell Terminal Blocks", brand: "Connectwell", category: "Automation", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Terminal+Block", desc: "Din-rail mounted robust terminal connectivity." },
+        { name: "Siemens Star Delta Starters", brand: "Siemens", category: "Automation", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Starters", desc: "Pre-wired motor starter panels for smooth operation." },
+
+        // Lighting & Solar
+        { name: "Philips LED High Bay Lighting", brand: "Philips", category: "Lighting", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=High+Bay+Light", desc: "Energy-saving illumination for warehouses and factories." },
+        { name: "Jinko Monocrystalline Solar Panels", brand: "Jinko", category: "Solar", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Solar+Panel", desc: "High-efficiency PV modules for commercial rooftops." },
+        
+        // Other Industrial Consumables
+        { name: "Castrol Industrial Lubricants", brand: "Castrol", category: "Motors & Gearboxes", image: "https://placehold.co/400x300/f1f5f9/1e293b?text=Industrial+Oil", desc: "Premium gear oils and hydraulic fluids." }
+    ];
+
+    let currentCategory = 'All';
+    let searchQuery = '';
+
+    const productGrid = document.getElementById('productGrid');
+    const searchInput = document.getElementById('searchInput');
+    const filterBtnElements = document.querySelectorAll('.filter-btn');
+
+    // --- Render Products Function ---
+    function renderProducts() {
+        // Filter logic
+        const filtered = catalogueData.filter(item => {
+            const matchesCategory = currentCategory === 'All' || item.category === currentCategory;
+            const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                  item.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                  item.category.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchesCategory && matchesSearch;
+        });
+
+        // Clear grid
+        productGrid.innerHTML = '';
+
+        // Handle empty state
+        if (filtered.length === 0) {
+            productGrid.innerHTML = `
+                <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-gray-100 shadow-sm fade-in">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">No products found</h3>
+                    <p class="text-gray-500">Try adjusting your search or category filter.</p>
+                </div>
+            `;
+            return;
+        }
+
+        // Render HTML cards
+        const html = filtered.map(product => `
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col fade-in">
+                <div class="relative h-48 overflow-hidden bg-gray-100">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm border border-gray-200">
+                        ${product.brand}
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-semibold text-secondary uppercase tracking-wider mb-2">${product.category}</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">${product.name}</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">${product.desc}</p>
+                    <button onclick="requestQuote('${product.name}')" class="w-full mt-auto py-2.5 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors duration-300">
+                        Request Quote
+                    </button>
+                </div>
+            </div>
+        `).join('');
+
+        productGrid.innerHTML = html;
+    }
+
+    // --- Interaction Handlers ---
+    
+    // Category Filter Button Click
+    window.filterCategory = function(category) {
+        currentCategory = category;
+        
+        // Update Button Styles
+        filterBtnElements.forEach(btn => {
+            if (btn.innerText.includes(category) || (category === 'All' && btn.innerText === 'All Products')) {
+                btn.className = "filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-secondary text-white shadow-md active";
+            } else {
+                btn.className = "filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-600 border border-gray-200 hover:bg-gray-100";
+            }
+        });
+
+        renderProducts();
+    }
+
+    // Search Input Typing
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderProducts();
+    });
+
+    // Mock Quote Function
+    window.requestQuote = function(productName) {
+        // Simulating a smooth UI message instead of an ugly alert
+        const btn = event.target;
+        const originalText = btn.innerText;
+        btn.innerText = "✓ Added to Inquiry";
+        btn.classList.add('bg-green-600', 'text-white', 'border-green-600');
+        btn.classList.remove('border-primary', 'text-primary', 'hover:bg-primary');
+        
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.classList.remove('bg-green-600', 'text-white', 'border-green-600');
+            btn.classList.add('border-primary', 'text-primary', 'hover:bg-primary');
+        }, 2500);
+    };
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Initial render
+    renderProducts();
+</script>
+
+</body>
+</html>
